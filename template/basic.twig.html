@@ -2,33 +2,46 @@
   <head>
     <style>
       body {
-        background-color: lightblue;
+        color: black;
         font-family: 'Raleway', sans-serif;
+        font-size: 9pt;
+      }
+
+      h3 {
+        color: deepskyblue;
+      }
+
+      ul > li {
+        margin-top: 5px;
       }
     </style>
     <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
   </head>
   <body>
     <h1>{{name}}</h1>
+
+    <h3>Awards</h3>
     <ul>
     {% for key,value in awards %}
-    <li>{{value.name}}</li>
+    <li>{{value.name}}</li> {{value.event}}
     {% endfor %}
     </ul>
 
     <br>
 
+    <h3>Work experiences</h3>
     <ul>
     {% for key,value in workExperiences %}
-    <li>{{value.name}}</li>
+    <li>{{value.name}}</li> {{value.description}}
     {% endfor %}
     </ul>
 
     <br>
 
+    <h3>Projects</h3>
     <ul>
     {% for key,value in projects %}
-    <li>{{value.name}}</li>
+    <li>{{value.name}}</li> {{value.description}}
     {% endfor %}
     </ul>
   </body>
