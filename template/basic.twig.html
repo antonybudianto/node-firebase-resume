@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <style>
+      body {
+        background-color: lightblue;
+        font-family: 'Raleway', sans-serif;
+      }
+    </style>
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <h1>{{name}}</h1>
+    <ul>
+    {% for key,value in awards %}
+    <li>{{value.name}}</li>
+    {% endfor %}
+    </ul>
+
+    <br>
+
+    <ul>
+    {% for key,value in workExperiences %}
+    <li>{{value.name}}</li>
+    {% endfor %}
+    </ul>
+
+    <br>
+
+    <ul>
+    {% for key,value in projects %}
+    <li>{{value.name}}</li>
+    {% endfor %}
+    </ul>
+  </body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "name": "node-firebase-resume",
+  "version": "1.0.0",
+  "description": "Nodejs Firebase powered Resume",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Antony Budianto",
+  "license": "ISC",
+  "dependencies": {
+    "firebase-admin": "^4.1.0",
+    "html-pdf": "^2.1.0",
+    "twig": "^0.10.3"
+  }
+}
