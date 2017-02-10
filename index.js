@@ -23,7 +23,8 @@ function generateTemplate(data) {
             name: 'Antony Budianto',
             awards: data[0],
             workExperiences: data[1],
-            projects: data[2]
+            profile: data[2],
+            educations: data[3]
         }, (err, html) => {
             if (err) return reject(err);
             resolve(html);
@@ -35,7 +36,8 @@ console.log('Retrieving data from Firebase...');
 Promise.all([
     getRef('awards'),
     getRef('workExperiences'),
-    getRef('projects')
+    getRef('profile'),
+    getRef('educations')
 ])
 .then(res => {
     console.log('Generating template...');

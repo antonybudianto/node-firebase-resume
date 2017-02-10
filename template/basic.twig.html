@@ -1,48 +1,139 @@
 <html>
   <head>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+
     <style>
       body {
         color: black;
         font-family: 'Raleway', sans-serif;
-        font-size: 9pt;
+        font-size: 7pt;
       }
 
-      h3 {
+      h3, .fa {
         color: deepskyblue;
       }
 
       ul > li {
         margin-top: 5px;
       }
+
+      .table {
+        font-size: 7pt;
+        width: 100%;
+        margin: auto;
+      }
+
+      .table.table-vertical tr td:first-child {
+        color: gray;
+        vertical-align: top;
+        text-align: right;
+        padding-right: 10px;
+        width: 130px;
+      }
     </style>
-    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
   </head>
   <body>
-    <h1>{{name}}</h1>
+    <div class="row">
+      <table class="table">
+        <tr>
+          <td>
+            <h1>{{name}}</h1>
+          </td>
+          <td style="text-align: right">
+            <div>
+              <div>
+                <i class="fa fa-envelope"></i> antonybudianto@gmail.com
+              </div>
+              <div>
+                <i class="fa fa-globe"></i> antonybudianto.com
+              </div>
+              <div>
+                <i class="fa fa-linkedin-square"></i> linkedin.com/in/antonybudianto
+              </div>
+              <div>
+                <i class="fa fa-github-square"></i> github.com/antonybudianto
+              </div>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <hr>
 
-    <h3>Awards</h3>
-    <ul>
-    {% for key,value in awards %}
-    <li>{{value.name}}</li> {{value.event}}
-    {% endfor %}
-    </ul>
+    <h3>Biodata</h3>
+    <table class="table table-vertical">
+      <tr>
+        <td>Name</td>
+        <td>{{profile.detail.name}}</td>
+      </tr>
+      <tr>
+        <td>Gender</td>
+        <td>{{profile.detail.gender}}</td>
+      </tr>
+      <tr>
+        <td>Place and Date of Birth</td>
+        <td>{{profile.detail.pob}}, {{profile.detail.dob}}</td>
+      </tr>
+    </table>
 
+    <h3>Summary</h3>
+    <p>
+      {{profile.summary}}
+    </p>
+    <br>
+
+    <h3>Educations</h3>
+    <table class="table table-vertical">
+      {% for key,value in educations %}
+      <tr>
+        <td>{{value.from}} to {{value.to}}</td>
+        <td>
+          <div>
+            {{value.name}}, {{value.major}} major, GPA {{value.gpa}}
+          </div>
+        </td>
+      </tr>
+      {% endfor %}
+    </table>
     <br>
 
     <h3>Work experiences</h3>
-    <ul>
-    {% for key,value in workExperiences %}
-    <li>{{value.name}}</li> {{value.description}}
-    {% endfor %}
-    </ul>
-
+    <table class="table table-vertical">
+      {% for key,value in workExperiences %}
+      <tr>
+        <td>{{value.startdate}} to {{value.enddate ?: 'now'}}</td>
+        <td>
+          <div class="timeline-title">
+            <strong>{{value.name}}</strong>
+          </div>
+          <div>
+            {{value.company}}
+          </div>
+          <div class="timeline-description">
+            {{value.description}}
+          </div>
+        </td>
+      </tr>
+      {% endfor %}
+    </table>
     <br>
 
-    <h3>Projects</h3>
-    <ul>
-    {% for key,value in projects %}
-    <li>{{value.name}}</li> {{value.description}}
-    {% endfor %}
-    </ul>
+    <h3>Awards</h3>
+    <table class="table table-vertical">
+      {% for key,value in awards %}
+      <tr>
+        <td>{{value.eventdate}}</td>
+        <td>
+          <div>
+            <strong>{{value.name}}</strong>
+          </div>
+          <div>
+            {{value.event}}
+          </div>
+        </td>
+      </tr>
+      {% endfor %}
+    </table>
   </body>
 </html>
