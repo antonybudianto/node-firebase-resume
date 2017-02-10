@@ -1,21 +1,7 @@
-const admin = require('firebase-admin');
 const Twig = require('twig');
 
 const { generatePdf } = require('./pdf');
-
-admin.initializeApp({
-  credential: admin.credential.cert('./key.json'),
-  databaseURL: 'https://antonybudianto-web.firebaseio.com'
-});
-
-const db = admin.database();
-
-function getRef(refName) {
-    return new Promise((res, rej) => {
-        const ref = db.ref(refName);
-        ref.once('value', (data) => res(data.val()));
-    });
-}
+const { getRef } = require('./firebase');
 
 function generateTemplate(data) {
     return new Promise((resolve, reject) => {

@@ -2,9 +2,9 @@
   "name": "node-firebase-resume",
   "version": "1.0.0",
   "description": "Nodejs Firebase powered Resume",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
-    "start": "node index",
+    "start": "node src/index",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Antony Budianto",
