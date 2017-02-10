@@ -3,7 +3,7 @@ const pdf = require('html-pdf');
 const options = {
   format: 'A4',
   "border": {
-    "top": "0.5in",            // default is 0, units: mm, cm, in, px
+    "top": "0.5in", // default is 0, units: mm, cm, in, px
     "right": "0.3in",
     "bottom": "0.5in",
     "left": "0.3in"

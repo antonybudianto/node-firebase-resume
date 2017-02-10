@@ -1,22 +1,6 @@
-const Twig = require('twig');
-
-const { generatePdf } = require('./pdf');
 const { getRef } = require('./firebase');
-
-function generateTemplate(data) {
-    return new Promise((resolve, reject) => {
-        Twig.renderFile('./template/basic.twig.html', {
-            name: 'Antony Budianto',
-            awards: data[0],
-            workExperiences: data[1],
-            profile: data[2],
-            educations: data[3]
-        }, (err, html) => {
-            if (err) return reject(err);
-            resolve(html);
-        });
-    });
-}
+const { generatePdf } = require('./pdf');
+const { generateTemplate } = require('./template');
 
 console.log('Retrieving data from Firebase...');
 Promise.all([
@@ -25,9 +9,9 @@ Promise.all([
     getRef('profile'),
     getRef('educations')
 ])
-.then(res => {
+.then(data => {
     console.log('Generating template...');
-    return generateTemplate(res);
+    return generateTemplate(data);
 })
 .then((html) => {
     console.log('Generating PDF...');
