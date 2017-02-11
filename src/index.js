@@ -1,8 +1,9 @@
-const { getRef } = require('./util/firebase');
+const { initApp, getRef } = require('./util/firebase');
 const { generatePdf } = require('./util/pdf');
 const { generateTemplate } = require('./util/template');
 
 console.log('Retrieving data from Firebase...');
+initApp();
 Promise.all([
     getRef('certifications'),
     getRef('workExperiences'),
