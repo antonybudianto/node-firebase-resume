@@ -1,6 +1,6 @@
-const { getRef } = require('./firebase');
-const { generatePdf } = require('./pdf');
-const { generateTemplate } = require('./template');
+const { getRef } = require('./util/firebase');
+const { generatePdf } = require('./util/pdf');
+const { generateTemplate } = require('./util/template');
 
 console.log('Retrieving data from Firebase...');
 Promise.all([

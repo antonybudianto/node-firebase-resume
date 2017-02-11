@@ -1,6 +1,6 @@
 const Twig = require('twig');
 
-const { generateDates } = require('./date-util');
+const { generateDates } = require('./date');
 
 function generateTemplate(data) {
   return new Promise((resolve, reject) => {
