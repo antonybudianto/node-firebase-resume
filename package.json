@@ -12,6 +12,7 @@
   "dependencies": {
     "firebase-admin": "^4.1.0",
     "html-pdf": "^2.1.0",
+    "lodash": "^4.17.4",
     "twig": "^0.10.3"
   }
 }

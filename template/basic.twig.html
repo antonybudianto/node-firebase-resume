@@ -87,7 +87,7 @@
     <table class="table table-vertical">
       {% for key,value in educations %}
       <tr>
-        <td>{{value.from}} to {{value.to}}</td>
+        <td>{{value.from}} - {{value.to}}</td>
         <td>
           <div>
             {{value.name}}, {{value.major}} major, GPA {{value.gpa}}
@@ -102,7 +102,7 @@
     <table class="table table-vertical">
       {% for key,value in workExperiences %}
       <tr>
-        <td>{{value.startdate}} to {{value.enddate ?: 'now'}}</td>
+        <td>{{value.startdate}} - {{value.enddate ?: 'present'}}</td>
         <td>
           <div class="timeline-title">
             <strong>{{value.name}}</strong>

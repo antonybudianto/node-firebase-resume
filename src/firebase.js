@@ -1,7 +1,7 @@
 const admin = require('firebase-admin');
 
 admin.initializeApp({
-  credential: admin.credential.cert('./key.json'),
+  credential: admin.credential.cert('key.json'),
   databaseURL: 'https://antonybudianto-web.firebaseio.com'
 });
 
