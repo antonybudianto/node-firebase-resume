@@ -7,7 +7,7 @@ function generateTemplate(data) {
     const workExperiences = generateDates(data[1], ['startdate', 'enddate']);
     const certifications = generateDates(data[0], ['date']);
     const educations = generateDates(data[3], ['from', 'to']);
-    Twig.renderFile('./template/basic.twig.html', {
+    Twig.renderFile('./src/template/basic.twig.html', {
       certifications,
       workExperiences,
       profile: data[2],
