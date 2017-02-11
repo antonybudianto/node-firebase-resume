@@ -28,6 +28,7 @@
         color: gray;
         vertical-align: top;
         text-align: right;
+        font-style: italic;
         padding-right: 10px;
         width: 130px;
       }
@@ -78,16 +79,15 @@
     </table>
 
     <h3>Summary</h3>
-    <p>
+    <p style="text-align: justify; padding: 10px;">
       {{profile.summary}}
     </p>
-    <br>
 
     <h3>Educations</h3>
     <table class="table table-vertical">
       {% for key,value in educations %}
       <tr>
-        <td>{{value.from}} - {{value.to}}</td>
+        <td>{{value.from_view}} - {{value.to_view}}</td>
         <td>
           <div>
             {{value.name}}, {{value.major}} major, GPA {{value.gpa}}
@@ -102,7 +102,7 @@
     <table class="table table-vertical">
       {% for key,value in workExperiences %}
       <tr>
-        <td>{{value.startdate}} - {{value.enddate ?: 'present'}}</td>
+        <td>{{value.startdate_view}} - {{value.enddate_view ?: 'present'}}</td>
         <td>
           <div class="timeline-title">
             <strong>{{value.name}}</strong>
@@ -119,11 +119,11 @@
     </table>
     <br>
 
-    <h3>Awards</h3>
+    <h3>Certifications</h3>
     <table class="table table-vertical">
-      {% for key,value in awards %}
+      {% for key,value in certifications %}
       <tr>
-        <td>{{value.eventdate}}</td>
+        <td>{{value.date_view}}</td>
         <td>
           <div>
             <strong>{{value.name}}</strong>

@@ -4,7 +4,7 @@ const { generateTemplate } = require('./template');
 
 console.log('Retrieving data from Firebase...');
 Promise.all([
-    getRef('awards'),
+    getRef('certifications'),
     getRef('workExperiences'),
     getRef('profile'),
     getRef('educations')
