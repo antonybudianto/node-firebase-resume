@@ -53,7 +53,7 @@
                 <i class="fa fa-linkedin-square"></i> linkedin.com/in/antonybudianto
               </div>
               <div>
-                <i class="fa fa-github-square"></i> github.com/antonybudianto
+                <i class="fa fa-github"></i> github.com/antonybudianto
               </div>
             </div>
           </td>
@@ -76,10 +76,14 @@
         <td>Place and Date of Birth</td>
         <td>{{profile.detail.pob}}, {{profile.detail.dob}}</td>
       </tr>
+      <tr>
+        <td>Language</td>
+        <td>{{profile.detail.language}}</td>
+      </tr>
     </table>
 
     <h3>Summary</h3>
-    <p style="text-align: justify; padding: 10px;">
+    <p style="text-align: justify; width:80%; margin:auto">
       {{profile.summary}}
     </p>
 
@@ -96,7 +100,6 @@
       </tr>
       {% endfor %}
     </table>
-    <br>
 
     <h3>Work experiences</h3>
     <table class="table table-vertical">
@@ -117,7 +120,6 @@
       </tr>
       {% endfor %}
     </table>
-    <br>
 
     <h3>Certifications</h3>
     <table class="table table-vertical">
@@ -135,5 +137,10 @@
       </tr>
       {% endfor %}
     </table>
+
+    <h3>Skills</h3>
+    <p style="text-align: justify;">
+      {{profile.skills}}
+    </p>
   </body>
 </html>
