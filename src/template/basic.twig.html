@@ -14,8 +14,15 @@
         color: deepskyblue;
       }
 
-      ul > li {
-        margin-top: 5px;
+      hr {
+        border: 0;
+        height: 0;
+        border-bottom: 1px solid lightgray;
+      }
+
+      .section {
+        padding-bottom: 5px;
+        border-bottom: 1px solid lightgray;
       }
 
       .table {
@@ -62,85 +69,97 @@
     </div>
     <hr>
 
-    <h3>Biodata</h3>
-    <table class="table table-vertical">
-      <tr>
-        <td>Name</td>
-        <td>{{profile.detail.name}}</td>
-      </tr>
-      <tr>
-        <td>Gender</td>
-        <td>{{profile.detail.gender}}</td>
-      </tr>
-      <tr>
-        <td>Place and Date of Birth</td>
-        <td>{{profile.detail.pob}}, {{profile.detail.dob}}</td>
-      </tr>
-      <tr>
-        <td>Language</td>
-        <td>{{profile.detail.language}}</td>
-      </tr>
-    </table>
+    <div class="section">
+      <h3>Biodata</h3>
+      <table class="table table-vertical">
+        <tr>
+          <td>Name</td>
+          <td>{{profile.detail.name}}</td>
+        </tr>
+        <tr>
+          <td>Gender</td>
+          <td>{{profile.detail.gender}}</td>
+        </tr>
+        <tr>
+          <td>Place and Date of Birth</td>
+          <td>{{profile.detail.pob}}, {{profile.detail.dob}}</td>
+        </tr>
+        <tr>
+          <td>Language</td>
+          <td>{{profile.detail.language}}</td>
+        </tr>
+      </table>
+    </div>
 
-    <h3>Summary</h3>
-    <p style="text-align: justify; width:80%; margin:auto">
-      {{profile.summary}}
-    </p>
+    <div class="section">
+      <h3>Summary</h3>
+      <p style="text-align: justify; width:80%; margin:auto">
+        {{profile.summary}}
+      </p>
+    </div>
 
-    <h3>Educations</h3>
-    <table class="table table-vertical">
-      {% for key,value in educations %}
-      <tr>
-        <td>{{value.from_view}} - {{value.to_view}}</td>
-        <td>
-          <div>
-            {{value.name}}, {{value.major}} major, GPA {{value.gpa}}
-          </div>
-        </td>
-      </tr>
-      {% endfor %}
-    </table>
+    <div class="section">
+      <h3>Educations</h3>
+      <table class="table table-vertical">
+        {% for key,value in educations %}
+        <tr>
+          <td>{{value.from_view}} - {{value.to_view}}</td>
+          <td>
+            <div>
+              {{value.name}}, {{value.major}} major, GPA {{value.gpa}}
+            </div>
+          </td>
+        </tr>
+        {% endfor %}
+      </table>
+    </div>
 
-    <h3>Work experiences</h3>
-    <table class="table table-vertical">
-      {% for key,value in workExperiences %}
-      <tr>
-        <td>{{value.startdate_view}} - {{value.enddate_view ?: 'present'}}</td>
-        <td>
-          <div class="timeline-title">
-            <strong>{{value.name}}</strong>
-          </div>
-          <div>
-            {{value.company}}
-          </div>
-          <div class="timeline-description">
-            {{value.description}}
-          </div>
-        </td>
-      </tr>
-      {% endfor %}
-    </table>
+    <div class="section">
+      <h3>Work experiences</h3>
+      <table class="table table-vertical">
+        {% for key,value in workExperiences %}
+        <tr>
+          <td>{{value.startdate_view}} - {{value.enddate_view ?: 'present'}}</td>
+          <td>
+            <div class="timeline-title">
+              <strong>{{value.name}}</strong>
+            </div>
+            <div>
+              {{value.company}}
+            </div>
+            <div class="timeline-description">
+              {{value.description}}
+            </div>
+          </td>
+        </tr>
+        {% endfor %}
+      </table>
+    </div>
 
-    <h3>Certifications</h3>
-    <table class="table table-vertical">
-      {% for key,value in certifications %}
-      <tr>
-        <td>{{value.date_view}}</td>
-        <td>
-          <div>
-            <strong>{{value.name}}</strong>
-          </div>
-          <div>
-            {{value.event}}
-          </div>
-        </td>
-      </tr>
-      {% endfor %}
-    </table>
+    <div class="section">
+      <h3>Certifications</h3>
+      <table class="table table-vertical">
+        {% for key,value in certifications %}
+        <tr>
+          <td>{{value.date_view}}</td>
+          <td>
+            <div>
+              <strong>{{value.name}}</strong>
+            </div>
+            <div>
+              {{value.event}}
+            </div>
+          </td>
+        </tr>
+        {% endfor %}
+      </table>
+    </div>
 
-    <h3>Skills</h3>
-    <p style="text-align: justify;">
-      {{profile.skills}}
-    </p>
+    <div class="section">
+      <h3>Skills</h3>
+      <p style="text-align: justify;">
+        {{profile.skills}}
+      </p>
+    </div>
   </body>
 </html>
