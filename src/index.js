@@ -1,6 +1,7 @@
 const { initApp, getRef } = require('./util/firebase');
 const { generatePdf } = require('./util/pdf');
 const { generateTemplate } = require('./util/template');
+const { generateDates } = require('./util/date');
 
 console.log('Retrieving data from Firebase...');
 initApp();
@@ -12,7 +13,17 @@ Promise.all([
 ])
 .then(data => {
     console.log('Generating template...');
-    return generateTemplate(data);
+    const mappedData = {
+      certifications: data[0],
+      workExperiences: data[1],
+      profile: data[2],
+      educations: data[3],
+    };
+    mappedData.workExperiences = generateDates(
+        mappedData.workExperiences, ['startdate', 'enddate']);
+    mappedData.certifications = generateDates(mappedData.certifications, ['date']);
+    mappedData.educations = generateDates(mappedData.educations, ['from', 'to']);
+    return generateTemplate(mappedData);
 })
 .then((html) => {
     console.log('Generating PDF...');
