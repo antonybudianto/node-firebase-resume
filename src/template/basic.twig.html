@@ -50,16 +50,16 @@
           <td style="text-align: right">
             <div>
               <div>
-                <i class="fa fa-envelope"></i> antonybudianto@gmail.com
+                <i class="fa fa-envelope"></i> {{profile.detail.links.email}}
               </div>
               <div>
-                <i class="fa fa-globe"></i> antonybudianto.com
+                <i class="fa fa-globe"></i> {{profile.detail.links.website}}
               </div>
               <div>
-                <i class="fa fa-linkedin-square"></i> linkedin.com/in/antonybudianto
+                <i class="fa fa-linkedin-square"></i> {{profile.detail.links.linkedin}}
               </div>
               <div>
-                <i class="fa fa-github"></i> github.com/antonybudianto
+                <i class="fa fa-github"></i> {{profile.detail.links.github}}
               </div>
             </div>
           </td>
@@ -73,7 +73,7 @@
       <table>
         <tr>
           <td>
-            <img src="https://antonybudianto.com/profile.jpg" width="70" height="80">
+            <img src="{{profile.detail.photoUrl}}" width="70" height="80">
           </td>
           <td>
             <table class="table table-vertical">
