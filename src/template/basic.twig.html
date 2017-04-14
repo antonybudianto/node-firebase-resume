@@ -38,6 +38,12 @@
         padding-right: 10px;
         width: 130px;
       }
+
+      .timeline-description {
+        margin-top: 2px;
+        margin-bottom: 5px;
+        font-size: 6pt;
+      }
     </style>
   </head>
   <body>
@@ -132,10 +138,7 @@
           <td>{{value.startdate_view}} - {{value.enddate_view ?: 'present'}}</td>
           <td>
             <div class="timeline-title">
-              <strong>{{value.name}}</strong>
-            </div>
-            <div>
-              {{value.company}}
+              <strong>{{value.name}}</strong> at <strong>{{value.company}}</strong>
             </div>
             <div class="timeline-description">
               {{value.description}}
