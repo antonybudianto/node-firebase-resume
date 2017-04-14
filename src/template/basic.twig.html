@@ -42,6 +42,9 @@
       .timeline-description {
         margin-top: 2px;
         margin-bottom: 5px;
+      }
+
+      .description {
         font-size: 6pt;
       }
     </style>
@@ -79,7 +82,7 @@
       <table>
         <tr>
           <td>
-            <img src="{{profile.detail.photoUrl}}" width="70" height="80">
+            <img src="{{profile.detail.photoUrl}}" style="width: 80px">
           </td>
           <td>
             <table class="table table-vertical">
@@ -140,7 +143,7 @@
             <div class="timeline-title">
               <strong>{{value.name}}</strong> at <strong>{{value.company}}</strong>
             </div>
-            <div class="timeline-description">
+            <div class="timeline-description description">
               {{value.description}}
             </div>
           </td>
@@ -173,6 +176,32 @@
       <p style="text-align: justify;">
         {{profile.skills}}
       </p>
+    </div>
+
+    <div class="section">
+      <br />
+      <br />
+      <h3>Portfolio</h3>
+      <table class="table">
+        {% for key,value in projects %}
+        <tr style="margin: 50px">
+          <td style="width: 120px">
+            <div style="height: 80px; overflow: hidden; border: 1px solid lightgray;">
+             <img src="{{value.imageUrl}}" height="80" style="width: 150px" />
+            </div>
+          </td>
+          <td style="vertical-align: top">
+            <div>
+              <strong>{{value.name}}</strong>
+            </div>
+            <div class="description">
+              {{value.description}} <br>
+              <a href="{{value.url}}">{{value.url}}</a>
+            </div>
+          </td>
+        </tr>
+        {% endfor %}
+      </table>
     </div>
   </body>
 </html>
