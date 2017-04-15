@@ -10,7 +10,7 @@ Promise.all([
     getRef('workExperiences'),
     getRef('profile'),
     getRef('educations'),
-    getRef('projects')
+    getRef('portfolios')
 ])
 .then(data => {
     console.log('Generating template...');
@@ -19,7 +19,7 @@ Promise.all([
       workExperiences: data[1],
       profile: data[2],
       educations: data[3],
-      projects: data[4]
+      portfolios: data[4]
     };
     mappedData.workExperiences = generateDates(
         mappedData.workExperiences, ['startdate', 'enddate']);
