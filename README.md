@@ -9,5 +9,10 @@ Generate a PDF resume based on your Firebase data
 4. Run `npm start`
 5. Your PDF will be generated on `dist` folder
 
+## Custom
+You can add your own custom template as you wish on `src/template` and then update `src/util/template.js` to use your template file.
+
+You also can adjust the data as you want on `src/index.js`
+
 ## License
 MIT
