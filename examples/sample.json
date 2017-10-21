@@ -1,0 +1,129 @@
+{
+  "certifications" : [ {
+    "date" : "2013-05-01",
+    "id" : "1",
+    "name" : "1st winner: HIMSISFO Competition 2013 \"Infinite Creation\" Web Design and Development Competition",
+    "show" : "Y"
+  }, {
+    "date" : "2015-04-01",
+    "id" : "3",
+    "name" : "5th rank: Research and Expo Competition (REOC) 2014. E-Learning Development for Indonesian Traditional Music.",
+    "show" : "Y"
+  } ],
+  "educations" : {
+    "binus" : {
+      "from" : "2011-09-01",
+      "gpa" : 3.7,
+      "major" : "Bachelor Degree, Information Systems",
+      "name" : "Binus University",
+      "to" : "2015-03-01"
+    }
+  },
+  "portfolios" : [ {
+    "description" : "Tamar Gold Shop is web development project that consists gold credit simulation, sell and buy gold, and more. This web is developed using CodeIgniter.",
+    "enddate" : "0000-00-00",
+    "id" : "0",
+    "imageUrl" : "https://firebasestorage.googleapis.com/v0/b/antonybudianto-web.appspot.com/o/portfolio_images%2Ftm.jpeg?alt=media&token=fc9d6a59-58a7-4936-93b2-fbff5dd6a18d",
+    "name" : "Tamar Gold Shop",
+    "show" : "Y",
+    "startdate" : "2013-05-07",
+    "team" : "Yuhdi",
+    "url" : "http://logammulia-dinar.com"
+  }, {
+    "description" : "Online 48-hours hackathon sponsored by Google",
+    "id" : 1,
+    "imageUrl" : "https://firebasestorage.googleapis.com/v0/b/antonybudianto-web.appspot.com/o/portfolio_images%2Frsz_puzzle_frenzy.jpg?alt=media&token=550a0b2b-115c-47df-95d8-3e3567de0ae0",
+    "name" : "Puzzle Frenzy (Angular Attack 2016)",
+    "url" : "https://angularattack.com"
+  }, {
+    "description" : "A simple Android game where player only need to tilt their device, avoiding obstacles to the end. This is one of my project while I worked as Teaching Assistant. I also developed the parser to parse object created by AB 2D Game Studio.",
+    "enddate" : "2014-07-17",
+    "id" : "2",
+    "imageUrl" : "https://firebasestorage.googleapis.com/v0/b/antonybudianto-web.appspot.com/o/portfolio_images%2Ftm2.jpeg?alt=media&token=a0063802-fcf7-4aef-be05-e50c402e2d16",
+    "name" : "Tilt Master",
+    "show" : "Y",
+    "startdate" : "2014-07-10",
+    "team" : "Erick Kurniawan",
+    "url" : "https://play.google.com/store/apps/details?id=com.tiltmaster.res"
+  }, {
+    "description" : "Desktop application for managing networks, made using Java",
+    "id" : 3,
+    "imageUrl" : "https://firebasestorage.googleapis.com/v0/b/antonybudianto-web.appspot.com/o/portfolio_images%2Frsz_roomnet.jpg?alt=media&token=8d0a1483-d8ff-45a0-83ce-f0d171c7e196",
+    "name" : "Room Network Manager"
+  }, {
+    "description" : "A simple 2D Game Studio where you can create project, design, and compile simple 2D game. Made using Java.",
+    "id" : 4,
+    "imageUrl" : "https://firebasestorage.googleapis.com/v0/b/antonybudianto-web.appspot.com/o/portfolio_images%2Fab2ds.jpeg?alt=media&token=7a862a50-80f2-4bb5-877a-7fcccd39b932",
+    "name" : "AB 2D Game Studio"
+  }, {
+    "description" : "A GitHub client to browse user's repo and its summary. Made using React",
+    "id" : 5,
+    "imageUrl" : "https://firebasestorage.googleapis.com/v0/b/antonybudianto-web.appspot.com/o/portfolio_images%2FGitFun%20App-min.jpeg?alt=media&token=3aca12e3-6bef-407a-93f9-bdcdc38818cf",
+    "name" : "GitFun",
+    "url" : "https://gitfun-web.herokuapp.com/"
+  }, {
+    "description" : "A Github mobile client to browse users, and view your notifications. Supports 2FA login. Made using React Native",
+    "id" : 6,
+    "imageUrl" : "https://firebasestorage.googleapis.com/v0/b/antonybudianto-web.appspot.com/o/portfolio_images%2Fgitfun-mobile%20(1)-min.jpg?alt=media&token=9318800d-8854-4cf9-af5b-2198cc478fde",
+    "name" : "GitFun Mobile",
+    "url" : "https://play.google.com/store/apps/details?id=com.antonybudianto.gitfun"
+  }, {
+    "description" : "Your handy trip fund app",
+    "id" : 7,
+    "imageUrl" : "https://firebasestorage.googleapis.com/v0/b/antonybudianto-web.appspot.com/o/portfolio_images%2FTripFund-min.jpeg?alt=media&token=33bea581-8137-41bd-a5ac-a8eafa92447f",
+    "name" : "TripFund (Angular Attack 2017)",
+    "url" : "https://tripfund-91050.firebaseapp.com"
+  } ],
+  "profile" : {
+    "detail" : {
+      "dob" : "August 8th, 1993",
+      "gender" : "Male",
+      "language" : "English (proficient), Indonesia (native)",
+      "links" : {
+        "email" : "antonybudianto@gmail.com",
+        "github" : "github.com/antonybudianto",
+        "linkedin" : "linkedin.com/in/antonybudianto",
+        "website" : "antonybudianto.com"
+      },
+      "name" : "Antony Budianto",
+      "photoUrl" : "https://antonybudianto.com/profile.jpg",
+      "pob" : "Pontianak"
+    },
+    "skills" : "HTML, JS, CSS, React, React Native, Angular, NodeJS, Laravel, Jenkins, Docker",
+    "summary" : "A software engineer and open source contributor with 4+ years experience on software development, web design and development, git, writing unit and end-to-end tests, deployment and setup CI server. <br> Actively contributing to open source and listed as one of the top 10 JavaScript GitHub developer in Indonesia by git-awards.com"
+  },
+  "workExperiences" : [ null, {
+    "company" : "GDP Labs",
+    "description" : "Develop enterprise class HR platform as front-end engineer using Angular",
+    "id" : "1",
+    "name" : "Senior Software Development Engineer",
+    "startdate" : "2016-09-01"
+  }, {
+    "company" : "GDP Labs",
+    "description" : "Develop enterprise applications using AngularJS, Angular 2.0, and Gulp",
+    "enddate" : "2016-08-31",
+    "id" : "2",
+    "name" : "Software Development Engineer",
+    "startdate" : "2015-09-01"
+  }, {
+    "company" : "Binus University - Software Laboratory Center",
+    "coverimg" : "admin.png",
+    "description" : "Cloning images for software lab computers, ensure networks running well, patching, calibration, maintenance, and develop various network-based applications",
+    "enddate" : "2015-08-31",
+    "id" : "3",
+    "name" : "Network Administrator",
+    "startdate" : "2014-09-01"
+  }, {
+    "company" : "Binus University - Software Laboratory Center",
+    "description" : "Assists students in programming class, making cases, marking student assignments and learn many hardskills and softskills",
+    "enddate" : "2014-09-01",
+    "id" : "4",
+    "name" : "Teaching Assistant",
+    "startdate" : "2013-08-01"
+  }, {
+    "company" : "Tokopedia",
+    "description" : "Develop micro-sites using React stack",
+    "name" : "Frontend Engineer",
+    "startdate" : "2017-09-11"
+  } ]
+}
