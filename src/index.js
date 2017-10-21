@@ -20,7 +20,8 @@ Promise.all([
       educations: data[3],
     };
     mappedData.workExperiences = generateDates(
-        mappedData.workExperiences, ['startdate', 'enddate']);
+        mappedData.workExperiences, ['startdate', 'enddate'])
+        .slice(0, 4);
     mappedData.certifications = generateDates(mappedData.certifications, ['date']);
     mappedData.educations = generateDates(mappedData.educations, ['from', 'to']);
     return generateTemplate(mappedData);
